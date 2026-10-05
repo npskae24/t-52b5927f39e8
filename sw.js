@@ -1,5 +1,5 @@
 // Melbourne Trip 2026 service worker — cache-first, offline after first visit
-const CACHE = 'mel-trip-2026-v6.15';
+const CACHE = 'mel-trip-2026-v6.16';
 const ASSETS = ['./', './index.html', './sw.js', './manifest.json'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS.map(u => new Request(u, {cache: 'reload'})))).then(() => self.skipWaiting()));
